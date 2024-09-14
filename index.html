@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waqf Amendment Bill Rejection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        #language-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .popup-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .popup-content button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+        }
+
+        #content {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .tracker {
+            margin: 20px 0;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .social-icons i:hover {
+            color: #007bff;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Language Selection Popup -->
+<div id="language-popup">
+    <div class="popup-content">
+        <h2>Select Language</h2>
+        <button onclick="selectLanguage('English')">English</button>
+        <button onclick="selectLanguage('Hindi')">Hindi</button>
+        <button onclick="selectLanguage('Urdu')">Urdu</button>
+        <button onclick="selectLanguage('Telugu')">Telugu</button>
+        <button onclick="selectLanguage('Malayalam')">Malayalam</button>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div id="content">
+    <h1>Assalamualaikum wa Rahmatullahi wa Barakatuh,</h1>
+    <p>
+        The Joint Parliamentary Committee on the Waqf Amendment Bill seeks public feedback using English or Hindi only. This bill violates Islamic law and fundamental rights and must, therefore, be rejected. Act now and reject the Waqf Amendment Bill with three simple clicks. Thank you.<br>
+        <strong>All India Muslim Personal Law Board (AIMPLB)</strong>
+    </p>
+    <p>Help? 7970639792, 7903662636, 9341842787, 9142956923, 8051969345, 9625429353, 8757931350, 8383076279, 7890014965, 9596357076, 6202841218</p>
+
+    <!-- Button to open Gmail -->
+    <button onclick="sendEmail()">Open Gmail</button>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <i class="fab fa-facebook" onclick="shareOnSocial('facebook')"></i>
+        <i class="fab fa-twitter" onclick="shareOnSocial('twitter')"></i>
+        <i class="fab fa-whatsapp" onclick="shareOnSocial('whatsapp')"></i>
+    </div>
+
+    <!-- Growth Tracker -->
+    <div class="tracker">
+        <h3>Live Growth Count: <span id="growth-count">2,48,29,302</span></h3>
+    </div>
+
+    <footer>
+        <p>Terms & Conditions: The data is not 100% accurate as we only track the button clicks.</p>
+    </footer>
+</div>
+
+<script>
+    // Language selection function
+    function selectLanguage(language) {
+        document.getElementById('language-popup').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        alert('You have selected: ' + language);
+    }
+
+    // Email function to open Gmail with pre-filled content
+    function sendEmail() {
+        const emailTo = "mailto:is.nowaqfamendment026@rejectwaqfbill2024.org,jpcwaqf-lss@sansad.nic.in";
+        const subject = "Complete Rejection of the Waqf Amendment Bill, 2024";
+        const body = "Dear Members of the Joint Parliamentary Committee,%0D%0A%0D%0AI strongly oppose the Waqf Amendment Bill. It violates fundamental rights, Islamic charity laws, and established judicial principles while introducing significant operational inefficiencies.%0D%0A%0D%0AIf adopted, this bill will transfer a majority of the control of Waqf properties to the government, reduce these properties through reclassification, and establish an opaque, biased, and inefficient structure for managing Waqf assets.%0D%0A%0D%0ASuch legislation erodes public trust in the Constitution. I urge you to revoke this bill immediately.%0D%0A%0D%0ASincerely,%0D%0A";
+        window.location.href = emailTo + "?subject=" + subject + "&body=" + body;
+        updateGrowthCount();
+    }
+
+    // Social Media Sharing
+    function shareOnSocial(platform) {
+        let url = "https://xyz.com";
+        let text = "Reject the Waqf Amendment Bill! Visit " + url + " to send an email for rejection.";
+        if (platform === 'facebook') {
+            window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url), '_blank');
+        } else if (platform === 'twitter') {
+            window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(text), '_blank');
+        } else if (platform === 'whatsapp') {
+            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text), '_blank');
+        }
+        updateGrowthCount();
+    }
+
+    // Growth Tracker Function
+    let growthCount = 24829302;
+    function updateGrowthCount() {
+        growthCount++;
+        document.getElementById('growth-count').innerText = growthCount.toLocaleString();
+    }
+</script>
+
+</body>
+</html>
